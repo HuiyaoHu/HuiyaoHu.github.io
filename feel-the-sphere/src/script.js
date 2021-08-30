@@ -121,6 +121,7 @@ window.addEventListener('resize', () =>
  */
 // Base camera (perspective or ortho)
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100)
+    //                                    FOV, aspect ratio              , near, far of clipping plane 
 camera.position.x = 0
 camera.position.y = 0
 camera.position.z = 2
@@ -133,7 +134,7 @@ scene.add(camera)
 /**
  * Renderer (set and forget)
  */
- const renderer = new THREE.WebGLRenderer({
+const renderer = new THREE.WebGLRenderer({
     canvas: canvas, 
     alpha: true         // make canvas transparent (i.e. use the website color as background)
 })

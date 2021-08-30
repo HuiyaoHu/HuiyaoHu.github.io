@@ -1,4 +1,5 @@
-// View website by typing in PS C:\Users\huiya\Desktop\3jsProject\threejs-webpack-starter> npm run dev
+// cd C:\Users\huiya\Desktop\Y5S1\AR5806_Architectural_Design_Research_Report\0_GITHUB\huiyaohu.github.io\feel-the-sphere 
+// npm run dev
 
 import './style.css'
 import * as THREE from 'three'          // Import the entire three.js core library
@@ -176,7 +177,7 @@ const tick = () =>
 
     const elapsedTime = clock.getElapsedTime()
 
-    // Update objects
+    // Animate objects
     sphere.rotation.y = 2 * elapsedTime            // automatic rotation
 
     sphere.rotation.y += .9 * (targetX - sphere.rotation.y)
@@ -190,7 +191,7 @@ const tick = () =>
     renderer.render(scene, camera)
 
     // Call tick again on the next frame
-    window.requestAnimationFrame(tick)
+    window.requestAnimationFrame(tick)          // create a loop that causes the renderer to draw the scene every time the screen is refreshed
 }
 
 tick()
